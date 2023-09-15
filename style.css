@@ -8,5 +8,59 @@ html {
 
 body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: ;
+    background-color: #162521;
+    color: #C0E0DE;
+}
+
+body, .settings {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+main {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.settings {
+    align-items: center;
+    flex: 1;
+    max-width: 300px;
+    gap: 16px;
+}
+
+button {
+    padding: 12px;
+    font-size: 24px;
+    border-radius: 10px;
+}
+
+.sketchpad {
+    display: grid;
+    width: 500px;
+    height: 500px;
+}
+
+.grid {
+    background-color: #fff;
+    border: 1px solid #162521;
+}
+
+.dark {
+    background-color: black;
+}
+
+.eraser {
+    background-color: #fff;
+}
+
+.color {
+    background-color: aqua;
 }

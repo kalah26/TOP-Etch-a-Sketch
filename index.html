@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Etch a Sketch</h1>
     </header>
     <main>
-        <div class="settings">
-            <span>Settings</span>
-            <button>dark</button>
-            <button>rainbow</button>
-            <button>color</button>
-            <button>eraser</button>
+        <div class="settings" id="settings">
+            <h3>Settings</h3>
+            <button value="dark">dark</button>
+            <button value="rainbow">rainbow</button>
+            <button value="eraser">eraser</button>
         </div>
-        <div class="skectch"></div>
+        <div class="sketchpad" id="sketchpad"></div>
     </main>
 </body>
 </html>
