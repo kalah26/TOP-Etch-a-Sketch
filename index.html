@@ -14,9 +14,12 @@
     <main>
         <div class="settings" id="settings">
             <h3>Settings</h3>
-            <button value="dark">dark</button>
-            <button value="rainbow">rainbow</button>
-            <button value="eraser">eraser</button>
+            <button>dark</button>
+            <button>rainbow</button>
+            <button>eraser</button>
+            <button id="reset">reset</button>
+            <input type="range" min="3" max="64" value="16" class="slider" id="squareNumber">
+            <div id="sliderValue" class="sliderValue"></div>
         </div>
         <div class="sketchpad" id="sketchpad"></div>
     </main>
