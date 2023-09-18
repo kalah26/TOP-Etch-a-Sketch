@@ -2,9 +2,15 @@ const squareNumber = document.getElementById('squareNumber');
 const sketchPad = document.getElementById('sketchpad')
 const sliderValue = document.getElementById('sliderValue')
 const slider = document.getElementById('squareNumber')
+const darkButton = document.getElementById('darkButton')
+const rainbowButton = document.getElementById('rainbowButton')
+const eraserButton = document.getElementById('eraserButton')
+const resetButton = document.getElementById('resetButton')
 
-let size = slider.value;
-let color;
+const DEFAULT_SIZE = slider.value;
+const DEFAULT_COLOR = 'blank'
+let size = newSize = DEFAULT_SIZE;
+let color = DEFAULT_COLOR;
 
 //default size displayed under the slider
 sliderValue.textContent = `${slider.value} x ${slider.value}`;
@@ -19,6 +25,14 @@ function makeSketch(size) {
         sketchPad.appendChild(sketchGrid);
     }
 }
+
+darkButton.addEventListener('click',()=> {color='black'})
+rainbowButton.addEventListener('click',()=> {color='rainbow'})
+eraserButton.addEventListener('click',()=> {color='blank'})
+resetButton.addEventListener('click',()=> {
+    reloadSketch()
+    color = DEFAULT_COLOR;
+})
 
 slider.oninput = function() {
     sliderValue.textContent = `${this.value} x ${this.value}`
@@ -36,10 +50,8 @@ function reloadSketch() {
     makeSketch(size)
 }
 
-color='blank'
-
 function setColor(e) {
-    if (color === 'dark') {
+    if (color === 'black') {
         e.target.style.backgroundColor = 'black'
     } else if (color === 'rainbow') {
         let rRed = Math.floor(Math.random()*256)
@@ -50,9 +62,6 @@ function setColor(e) {
         e.target.style.backgroundColor = 'white'
     }
 }
-
-
-
 
 window.onload = ()=> {
     makeSketch(size)

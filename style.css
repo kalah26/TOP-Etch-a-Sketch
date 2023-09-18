@@ -10,8 +10,8 @@ html {
 
 body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #162521;
-    color: #C0E0DE;
+    background-color: #534B62;
+    color: #FBFFFE;
 }
 
 body, .settings {
@@ -61,10 +61,16 @@ button {
 }
 
 button:hover {
-    background-color: #162521;
-    color: #C0E0DE;
+    background-color: #9799CA;
+    color: #fff;
     transform: scale(1.1);
     transition: .2s;
+}
+
+.clicked {
+    background-color: #9799CA;
+    color: #fff;
+    transform: scale(1.1);
 }
 
 .slider {
@@ -102,17 +108,22 @@ button:hover {
 
 .grid {
     background-color: #fff;
-    border: 1px solid #162521;
 }
 
-.dark {
-    background-color: black;
+input[type='color'] {
+    -webkit-appearance: none;
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 50%;
 }
 
-.eraser {
-    background-color: #fff;
+input[type='color']::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
 }
 
-.color {
-    background-color: aqua;
+input[type='color']::-webkit-color-swatch-wrapper {
+    border: none;
+    border-radius: 50%;
 }
